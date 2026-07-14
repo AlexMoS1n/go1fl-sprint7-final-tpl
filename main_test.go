@@ -106,10 +106,10 @@ func TestCafeSearch(t *testing.T) {
 
 		require.Equal(t, http.StatusOK, response.Code)
 
-		cafeUpperList := strings.Split(strings.TrimSpace(response.Body.String()), ",")
+		cafeList := strings.Split(strings.TrimSpace(response.Body.String()), ",")
 
 		countFound := 0
-		for _, itemCafe := range cafeUpperList {
+		for _, itemCafe := range cafeList {
 			if itemCafe == "" {
 				continue
 			}
